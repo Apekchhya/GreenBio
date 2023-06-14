@@ -1,0 +1,100 @@
+{% extends "index.html" %}
+
+{% block content %}
+<nav class="fixed-navbar">
+    <!-- <div class = "logo" ><img src = "static/logo.png" alt ="logo"></div> -->
+    <ul class = 'nav-list'>
+        <div class = "nav-right">
+            <div class="border-style">
+            <li><a href="{% url 'home' %}"> HOME </a></li>
+            <li><a href="{% url 'home' %}">ABOUT </a></li>
+            <li><a href="{% url 'home' %}">OUR PRODUCTS </a></li>
+            <li><a href="{% url 'blog' %}">KNOWLEDGE</a> </li>
+            </div>
+            <li class = "nav-border"><a href="{% url 'home' %}">CONTACT US</a></li>
+        </div>
+    </ul>
+  </nav>
+<ul>
+  <div class="blog-nav">
+    <li><a href="#content-blog" class="is-active" > Blogs </a></li>
+    <li><a href="#" > Research works</a></li>
+    <li><a href="#content-success-story">Success stories </a></li>
+  </div>
+</ul>
+<div id="content-blog" class="content is-active">
+  <div class="knowledge-title">
+    Educational resources to take your knowledge to next level.
+</div>
+<section class="blog-section">
+    
+    <div class = "blog-container">
+        <div class = "blog-outer">
+            <div class = "blog-image" style="background-color: orange;">
+                <!-- <img src = "static/image.jpg" alt="image"> -->
+            </div>
+                <div class = "blog-title">
+                    This is blog title. This is blog title
+                </div>
+                <div class = "blog-description">
+                    This is blog description. I am writing about something related to website development. This is blog description. I am writing about something related to website development.This is blog description. I am writing about something related to website development.This is blog description. I am writing about something related to website development. 
+
+                </div>
+                <div class="read-more">
+                    <button class="read-more-button">Read full article</button>
+                </div>
+
+        </div>
+        <div class = "blog-outer">
+            <div class = "blog-image" style="background-color: olivedrab;">
+                <!-- <img src = "static/image.jpg" alt="image"> -->
+            </div>
+                <div class = "blog-title">
+                    This is blog title
+                </div>
+                <div class = "blog-description">
+                    This is blog description. I am writing about something related to website development. This is blog description. I am writing about something related to website development.This is blog description. I am writing about something related to website development.This is blog description. I am writing about something related to website development. 
+
+                </div>
+                <div class="read-more">
+                    <button class="read-more-button">Read full article</button>
+                </div>
+
+        </div>
+        <div class = "blog-outer">
+            <div class = "blog-image" style="background-color: rgba(0, 0, 128, 0.685);">
+                <!-- <img src = "static/image.jpg" alt="image"> -->
+            </div>
+                <div class = "blog-title">
+                    This is blog title
+                </div>
+                <div class = "blog-description">
+                    This is blog description. I am writing about something related to website development. This is blog description. I am writing about something related to website development.This is blog description. I am writing about something related to website development.This is blog description. I am writing about something related to website development. 
+
+                </div>
+                <div class="read-more">
+                <button class="read-more-button">Read full article</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</section>
+
+
+<div id="content-success-story" class="content">
+<div class="success-story-heading">
+    <h3>We blossom and flourish through the shared success of our dedicated farmers and researchers.</h3>
+    <p>In the fertile fields of collaboration, we cultivate an ecosystem where farmers and researchers thrive. Their triumphs are the lifeblood of our company, inspiring us to push boundaries and reach new heights. With unwavering dedication, we provide them with the tools, resources, and unwavering support needed to flourish. Together, we celebrate their victories, basking in the radiance of their achievements. In this tapestry of growth, we find purpose, knowing that our shared success blooms from the seeds sown by our incredible farmers and researchers.</p>
+</div>
+
+<div class="success-story-video">
+    <div class = "success-video" style="background-image: url(../static/video.JPG);"></div>
+    <div class = "success-video" style="background-image: url(../static/video.JPG);"></div>
+    <div class = "success-video" style="background-image: url(../static/video.JPG);"></div> 
+    <div class = "success-video" style="background-image: url(../static/video.JPG);"></div> 
+</div>
+
+</div>
+
+{% endblock %}

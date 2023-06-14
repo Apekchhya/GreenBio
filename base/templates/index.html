@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Green Biotech</title>
+    <link rel="icon" type="image/png" href="static/logo.png">
+    <meta name="keywords" content="Green Biotech, Mushroom, Spawn">
+    <meta name="description" content="Website of Green Biotech and Research Centre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'base/style.css' %}?v=60 .0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-N7lJ6lAxQvKV4HQyW8QRBsLsN/GaHCjOeS0w8R/1aYFYJNc3v4Kd4b8YO93sG4SP" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-ZRp0Fb+7VUdWAXu8VEVJqr1z2DE7vXhULa8HAK5OF5l5Q5h46mGwbaO/fPpJbK0Y" crossorigin=""></script>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><span>&#9742;</span>&nbsp&nbsp +977-9848012280</li>
+            <li><span class="fas fa-map-marker-alt"></span>&nbsp&nbsp623F+6H, Pokhara 33700, Gandaki Province, Nepal</li>
+            <div class="top-right">
+            <li ><i class="fab fa-facebook"></i></li>
+            <li ><i class="fab fa-youtube"></i></li>
+            <li ><i class="fab fa-instagram"></i></li>
+            </div>
+        </ul>
+    </header>
+    {% block content %}
+    <section class="home-page-first">
+        <video autoplay="" loop="" muted="" playsinline="" ><source src="static\stock-footage-ripening-ears-of-meadow-wheat-field-rich-harvest-concept-slow-motion-wheat-field-ears-of-green.webm" type="video/mp4"></video>
+        <nav class="navbar">
+            <!-- <div class = "logo" ><img src = "static/logo.png" alt ="logo"></div> -->
+            <ul class = 'nav-list'>
+                <div class = "nav-right">
+                    <div class="border-style">
+                    <li><a href="#" class="active" onclick="activateLink(this)">HOME </a></li>
+                    <li><a href="{% url 'about' %}">ABOUT </a></li>
+                    <li><a href="{% url 'about_team' %}">OUR PRODUCTS</a> </li>
+                    <li><a href="{% url 'blog' %}" >KNOWLEDGE</a> </li>
+                    </div>
+                    <li class = "nav-border"><a href="{% url 'contact' %}">CONTACT US</a></li>
+                </div>
+            </ul>
+            
+    
+            
+        </nav>
+        <div class = "companyname">
+            <div style="height: 2vh;"></div>
+            <div class="grid-name">
+                <h1 class="name">GREEN BIO TECH & RESEARCH CENTRE</h1> 
+                <div class="name"></div>
+                <p>Biotechnology for future</p>
+            </div>
+         
+        </div>
+        <div class = "bottom-cover"><img src = "static/bottom-cover.png" alt="image"></div>
+    </section>
+    <div style="height: 20vh;"></div>
+    <section class = "home-page-sec1">
+        <div class = "expertise-heading"><h1>Our Expertise</h1></div>
+        <div class = "expertise-description">Discovery and applied research to improve Nepals’s most important crops.</div>
+        <div class = "grid-sec-1">
+            <div class = "grid-sec-1-hex">
+                <!-- <img src = "static/image.jpg" alt = "image"> -->
+                <img class = "image-buttom-cover" src = "static/download.svg" alt="image">
+                
+
+            </div>
+            <div class = "grid-sec-1-hex"><img class = "image-buttom-cover" src = "static/download.svg" alt="image"></div>
+            <div class = "grid-sec-1-hex"><img class = "image-buttom-cover" src = "static/download.svg" alt="image"></div>
+            <div class = "grid-sec-1-hex"><img class = "image-buttom-cover" src = "static/download.svg" alt="image"></div>
+        </div>
+    </section>
+    {% endblock %}
+    <footer class="footer">
+        
+        <div class = "footer-container">
+            <div>
+                <img class = "footer-logo" src = "static/logo.png" alt="image">
+                  <div class = footer-contact>
+                    <span>&#9742;</span>&nbsp&nbsp+977-9848012280
+                  </div>
+                  <div class = footer-contact>
+                    <span class="fas fa-map-marker-alt"></span>&nbsp&nbspPokhara 33700, Gandaki Province, Nepal
+                  </div>
+            </div>
+                
+            <div>
+                <div class = "footer-title">dddd</div>
+                <div>dddd</div>
+                <div>dddd</div>
+                <div>dddd</div>
+                <div>dddd</div>
+            </div>
+            <div>
+                <div class = "footer-title">dddd</div>
+                <div>dddd</div>
+                <div>dddd</div>
+                <div>dddd</div>
+            </div>
+        </div>
+        <div class="footer-inner"></div>
+        </div>
+        <div class = "footer-end">GBRC &copy; 2023 All rights reserved</div>
+    </footer>
+
+    <script src="{% static 'base/script.js' %}?v=22.0"></script>
+</body>
+</html>
