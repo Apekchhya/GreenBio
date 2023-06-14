@@ -1,0 +1,14 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/greenbio/public_html
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/mkdir $DEPLOYPATH/myvenv
+    - /bin/mkdir $DEPLOYPATH/myvenv/lib
+    - /bin/mkdir $DEPLOYPATH/myvenv/lib/python3.10.9
+    - /bin/mkdir $DEPLOYPATH/myvenv/lib/python3.10.9/site-packages
+    - /bin/cp -R /home/greenbio/myvenv/lib/python3.10.9/site-packages/* $DEPLOYPATH/myvenv/lib/python3.10.9/site-packages
+    - /bin/chmod -R 0755 $DEPLOYPATH
+    - /bin/find $DEPLOYPATH -type d -exec /bin/chmod 0755 {} \;
+    - /bin/find $DEPLOYPATH -type f -exec /bin/chmod 0644 {} \;
+    - /bin/chown -R greenbio:greenbio $DEPLOYPATH
